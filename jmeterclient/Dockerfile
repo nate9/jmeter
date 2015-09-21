@@ -16,8 +16,6 @@
 # TODO - The current recipe demands that the jmeter.properties used by jmeter-server image and
 #        the one used by *this* image be in lock step; at least as far as the ports are concerned.
 #        That seems icky.  Fix it, yo!
-# TODO - Can't seem to get around hard coded JMeter version number in ENTRYPOINT.  Variable does
-#        not get expanded (probably because it is in a string literal).
 
 # Use jmeter-base as the foundation
 FROM nate9/jmeterbase
@@ -32,4 +30,4 @@ VOLUME ["/logs"]
 # Use a predefined configuration.  This sets the contract for connecting to jmeter servers.
 ADD jmeter.properties /var/lib/apache-jmeter-$JMETER_VERSION/bin/
 
-ENTRYPOINT /var/lib/apache-jmeter-$JMETER_VERSION/bin/jmeter
+ENTRYPOINT ["jmeter"]
