@@ -1,0 +1,1 @@
+Dockerfiles for jmeter images built on top of a minimal openjdk java 8 image.
