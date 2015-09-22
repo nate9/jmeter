@@ -7,4 +7,4 @@ RUN cd /var/lib && \
   tar xf jmeter-$JMETER_VERSION.tgz && \
   rm -f jmeter-$JMETER_VERSION.tgz
   
-ENV PATH $PATH:/var/lib/jmeter-$JMETER_VERSION/bin
+ENV PATH /var/lib/apache-jmeter-$JMETER_VERSION/bin:$PATH
