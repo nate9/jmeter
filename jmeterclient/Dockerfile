@@ -22,10 +22,6 @@ FROM nate9/jmeterbase
 
 MAINTAINER Nathaniel Lai lai.nathaniel@gmail.com
 
-#Set the max limit of the number of processes a user can run from 1000 to unlimited
-RUN ulimit -u unlimited
-RUN ulimit -n unlimited
-
 # Create mount point for script, data and log files
 VOLUME ["/scripts"]
 VOLUME ["/input_data"]
