@@ -11,6 +11,6 @@ RUN cd /var/lib && \
 
 #Install groovy scripting plugin
 RUN cd /var/lib && \
-  curl http://central.maven.org/maven2/org/codehaus/groovy/groovy-all/$GROOVY_VERSION/groovy-all-$GROOVY_VERSION.jar -o /var/lib/apache-jmeter-$JMETER_VERSION/lib/groovy-all-$GROOVY_VERSION.jar && \
+  curl http://central.maven.org/maven2/org/codehaus/groovy/groovy-all/$GROOVY_VERSION/groovy-all-$GROOVY_VERSION.jar -o /var/lib/apache-jmeter-$JMETER_VERSION/lib/groovy-all-$GROOVY_VERSION.jar
   
 ENV PATH /var/lib/apache-jmeter-$JMETER_VERSION/bin:$PATH
